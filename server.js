@@ -22,7 +22,7 @@ app.use("/api/cart", require("./routes/cartRoutes"));
 app.use("/api/wishlist", require("./routes/wishlistRoutes"));
 
 app.get("/", (req, res) => {
-  res.send("Shopping App Backend is Running 🚀");
+  res.send("Shopping App Backend is Running");
 });
 
 const PORT = process.env.PORT || 5000;

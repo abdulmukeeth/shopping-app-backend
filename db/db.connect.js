@@ -6,7 +6,7 @@ const mongoUri = process.env.MONGODB;
 
 const initializeDatabase = async () => {
     await mongoose.connect(mongoUri).then(()=>{
-    console.log("Connected to MeetUp Mongo Database");
+    console.log("Connected to Shopping App Mongo Database");
     }).catch(
         (error) => console.log("Error Connecting to Database", error)
     );
