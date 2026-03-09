@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const { productId, title, price } = req.body;
+    const { productId, title, price, image, rating } = req.body;
 
     let cart = await Cart.findOne();
 
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
     if (existingItem) {
       existingItem.qty += 1;
     } else {
-      cart.items.push({ productId, title, price, qty: 1 });
+      cart.items.push({ productId, title, price, image, rating, qty: 1 });
     }
 
     await cart.save();
